@@ -1,0 +1,1 @@
+﻿//Os pedidos podem estar associados a uma mesa.
