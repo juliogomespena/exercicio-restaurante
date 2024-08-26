@@ -2,9 +2,10 @@
 //A classe Restaurante deve ter mesas que podem ser reservadas e um cardápio com itens que podem ser pedidos.
 //Os pedidos podem estar associados a uma mesa.
 
-Cardapio cardapio = new();
+//Iniciando instância do restaurante
+Restaurante restaurante = new();
 
-//Adicionando pratos
+//Criando pratos
 Pratos prato01 = new()
 {
 
@@ -38,8 +39,11 @@ Pratos prato03 = new()
 
 };
 
-cardapio.AdicionarPratosAoCardapio(prato01);
-cardapio.AdicionarPratosAoCardapio(prato02);
-cardapio.AdicionarPratosAoCardapio(prato03);
+//Adiciona pratos ao cardápio do restaurante
+restaurante.AdicionarPratosAoCardapio(prato01);
+restaurante.AdicionarPratosAoCardapio(prato02);
+restaurante.AdicionarPratosAoCardapio(prato03);
 
-cardapio.ExibirCardapio();
+//Exibe o cardapio
+restaurante.ExibirCardapio();
+
