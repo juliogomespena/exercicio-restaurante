@@ -21,13 +21,8 @@
 
         foreach (Pratos prato in cardapio)
         {
-            
-            if ( prato.Disponivel == true)
-            {
         
                 Console.WriteLine($"{prato.NomeDoPrato}\n{prato.DescricaoDoPrato}\nR$: {prato.Preco}\n");
-
-            }
 
         }
 
