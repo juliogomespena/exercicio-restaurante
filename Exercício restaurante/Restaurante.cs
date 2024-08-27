@@ -42,6 +42,7 @@ class Restaurante
 
         Console.WriteLine("Cardápio ->\n");
 
+        //Exibe descrição para cada prato no cardápio
         foreach (Pratos prato in Cardapio.cardapio)
         {
 
@@ -96,7 +97,8 @@ class Restaurante
 
     public void CriarMesas(int qtd)
     {
-
+        
+        //Gera o número de mesas passado como parametro
         for (int i = 1; i <= qtd; i++)
         {
             
@@ -140,6 +142,7 @@ class Restaurante
     public void ExibirMesas()
     {
 
+        //Exibe cada mesa que foi criada, junto com sua mensagem de disponível ou reservada.
         foreach (Mesas mesa in Mesas)
         {
 
@@ -202,8 +205,10 @@ class Restaurante
 
             }
 
+            //Adiciona pedido a lista de pedidos
             ListaDePedidos.Add(pedido);
         }
+        //Se número da mesa for inválido, exibe mensagem.
         else
         {
 
@@ -216,6 +221,7 @@ class Restaurante
     public void ExibirPedidos()
     {
 
+        //Para cada pedido, exibe descrição detalhada
         foreach (Pedidos ped in ListaDePedidos)
         {
 
@@ -224,7 +230,9 @@ class Restaurante
             Console.WriteLine($"Status: {ped.Status}");
             Console.Write($"Pratos: ");
 
+            //Formatação caso tenha somente um prato no pedido
             if (ped.PratosDoPedido.Count == 1) Console.WriteLine($"{ped.PratosDoPedido[0].NomeDoPrato}");
+            //Formatação para dois ou mais pratos
             else
             {
                 for (int i = 0; i < ped.PratosDoPedido.Count; i++)
