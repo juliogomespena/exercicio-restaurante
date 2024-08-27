@@ -12,7 +12,7 @@ restaurante.CriarPratos();
 restaurante.AdicionarPratosAoCardapio();
 
 //Cria mesas do restaurante
-restaurante.CriarMesas(10);
+restaurante.CriarMesas(3);
 
 //Exibe o cardapio
 restaurante.ExibirCardapio();
@@ -21,4 +21,13 @@ Console.WriteLine();
 
 //Exibe mesas
 restaurante.ExibirMesas();
+
+//Cria pedido para a mesa 01
+restaurante.CriarPedido(3, [1, 1, 0]);
+
+//Cria pedido para a mesa 02
+restaurante.CriarPedido(2, [2]);
+
+//Exibe pedidos
+restaurante.ExibirPedidos();
 
